@@ -6,6 +6,15 @@ import (
 	"time"
 )
 
+func TestURLs(urls []string) {
+	for _, url := range urls {
+		if err := testURL(url); err != nil {
+			fmt.Println("[!] Error testing URL:", url)
+			fmt.Println("  -- [?] error:", err)
+		}
+	}
+}
+
 func testURL(url string) error {
 	startTime := time.Now()
 	resp, err := http.Get(url)
