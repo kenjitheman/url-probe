@@ -6,34 +6,34 @@ import (
 	"time"
 )
 
-func TestURLs(urls []string) {
-	for _, url := range urls {
-		if err := testURL(url); err != nil {
-			fmt.Println("[!] Error testing URL:", url)
-			fmt.Println("  -- [?] error:", err)
-		}
-	}
-}
-
-func testURL(url string) error {
+func ProbeURL(url string) error {
 	startTime := time.Now()
 	resp, err := http.Get(url)
-	elapsedTime := time.Since(startTime)
-
 	if err != nil {
 		return err
 	}
-
 	defer resp.Body.Close()
 
-	if resp.StatusCode == http.StatusOK {
-		fmt.Println("[+] URL:", url)
-	} else {
-		fmt.Println("[!] URL:", url)
+	elapsed := time.Since(startTime)
+
+	fmt.Printf("[+] URL: %s\n", url)
+	fmt.Printf("    - Status Code: %d\n", resp.StatusCode)
+	fmt.Printf("    - Response Time: %s\n", elapsed)
+
+	return nil
+}
+
+func Run(args []string) error {
+	if len(args) == 0 {
+		return fmt.Errorf("No URLs provided -> usage: url-probe <url1> <url2>")
 	}
 
-	fmt.Println("  -- [?] status:", resp.Status)
-	fmt.Println("  -- [?] response time:", elapsedTime)
+	for _, url := range args {
+		err := ProbeURL(url)
+		if err != nil {
+			fmt.Printf("ERROR probing URL %s: %v\n", url, err)
+		}
+	}
 
 	return nil
 }
