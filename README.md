@@ -16,12 +16,51 @@
 ## project structure:
 
 ```go
+.
+├── core
+│   ├── args.go
+│   ├── core.go
+│   └── reader.go
+├── go.mod
+├── go.sum
+├── main.go
+└── README.md
 ```
 
 ## installation
 
 ```shell
 git clone https://github.com/kenjitheman/url-probe
+```
+
+## usage
+
+```
+go build
+```
+
+- using command line arguments:
+
+```sh
+./url-probe https://example.com https://example2.com
+```
+
+- using csv as a source:
+
+```sh
+./url-probe -source=csv -file=urls.csv
+```
+
+- using json as a source:
+
+```sh
+./url-probe -source=json -file=urls.json
+```
+
+- using txt as a source:
+
+```sh
+./url-probe -source=txt -file=urls.txt
 ```
 
 ## contributing
