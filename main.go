@@ -1,15 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"os"
 
 	"github.com/kenjitheman/url-probe/core"
 )
 
 func main() {
-    core.PrintUsage()
-    args := core.ParseArgs()
-    fmt.Println(args)
-
-    // todo: all
+	if err := core.Run(os.Args[1:]); err != nil {
+		log.Fatalf("Error: %v\n", err)
+	}
 }
