@@ -1,35 +1,22 @@
 package core
 
-import (
-	"flag"
-	"fmt"
-	"os"
-)
+import "flag"
 
 type Args struct {
-	FileType   string
-	InputFile  string
-	OutputFile string
-	Verbose    bool
-	OtherArgs  []string
+	Source string
+	File   string
+	URLs   []string
 }
 
-func ParseArgs() Args {
+func ParseArgs() (Args, error) {
 	var args Args
 
-	flag.StringVar(&args.FileType, "type", "txt", "file type (csv, json, txt)")
-	flag.StringVar(&args.InputFile, "input", "", "input file path")
-	flag.StringVar(&args.OutputFile, "output", "", "output file path")
-	flag.BoolVar(&args.Verbose, "verbose", false, "enable verbose mode")
+	flag.StringVar(&args.Source, "source", "args", "Source of URLs (json, csv, text, args)")
+	flag.StringVar(&args.File, "file", "", "File containing URLs (for json, csv, and text sources)")
 
 	flag.Parse()
 
-	args.OtherArgs = flag.Args()
+	args.URLs = flag.Args()
 
-	return args
-}
-
-func PrintUsage() {
-	fmt.Fprintf(os.Stderr, "Usage: %s [options] [additional arguments]\n", os.Args[0])
-	flag.PrintDefaults()
+	return args, nil
 }
