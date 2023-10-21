@@ -16,25 +16,25 @@ func TestParseArgs(t *testing.T) {
 	parsedArgs, err := core.ParseArgs()
 
 	if err != nil {
-		t.Fatalf("ParseArgs returned an error: %v", err)
+		t.Fatalf("parseArgs returned an error: %v", err)
 	}
 
 	if parsedArgs.Source != "json" {
-		t.Errorf("Expected Source to be 'json', but got '%s'", parsedArgs.Source)
+		t.Errorf("expected Source to be 'json', but got '%s'", parsedArgs.Source)
 	}
 
 	if parsedArgs.File != "test.json" {
-		t.Errorf("Expected File to be 'test.json', but got '%s'", parsedArgs.File)
+		t.Errorf("expected File to be 'test.json', but got '%s'", parsedArgs.File)
 	}
 
 	if len(parsedArgs.URLs) != 2 {
-		t.Errorf("Expected 2 URLs, but got %d", len(parsedArgs.URLs))
+		t.Errorf("expected 2 URLs, but got %d", len(parsedArgs.URLs))
 	} else {
 		if parsedArgs.URLs[0] != "url1" {
-			t.Errorf("Expected URL 1 to be 'url1', but got '%s'", parsedArgs.URLs[0])
+			t.Errorf("expected URL 1 to be 'url1', but got '%s'", parsedArgs.URLs[0])
 		}
 		if parsedArgs.URLs[1] != "url2" {
-			t.Errorf("Expected URL 2 to be 'url2', but got '%s'", parsedArgs.URLs[1])
+			t.Errorf("expected URL 2 to be 'url2', but got '%s'", parsedArgs.URLs[1])
 		}
 	}
 }
