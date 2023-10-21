@@ -24,7 +24,12 @@
 ├── go.mod
 ├── go.sum
 ├── main.go
-└── README.md
+├── README.md
+└── tests
+    ├── args_test.go
+    ├── core_test.go
+    ├── probe_test.go
+    └── reader_test.go
 ```
 
 ## installation
