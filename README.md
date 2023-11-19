@@ -1,5 +1,6 @@
 ## url-probe
-### that the tool is guarding or watching over URLs to ensure their availability and performance
+
+### That the tool is guarding or watching over URLs to ensure their availability and performance.
 
 ###
 
@@ -9,11 +10,10 @@
 
 ###
 
+- A simple command-line tool in golang which is checking url health and performance.
+- Provides a command-line interface for checking url health and performance.
 
-- a simple command-line tool in golang which is checking url health and performance 
-- provides a command-line interface for checking url health and performance
-
-## project structure:
+## Project structure:
 
 ```go
 .
@@ -32,49 +32,49 @@
     └── reader_test.go
 ```
 
-## installation
+## Installation
 
 ```shell
 git clone https://github.com/kenjitheman/url-probe
 ```
 
-## usage
+## Usage
 
-```
+```shell
 go build
 ```
 
-- using command line arguments:
+- Using command line arguments:
 
-```sh
+```shell
 ./url-probe https://example.com https://example2.com
 ```
 
-- using csv as a source:
+- Using csv as a source:
 
-```sh
+```shell
 ./url-probe -source=csv -file=urls.csv
 ```
 
-- using json as a source:
+- Using json as a source:
 
-```sh
+```shell
 ./url-probe -source=json -file=urls.json
 ```
 
-- using txt as a source:
+- Using txt as a source:
 
-```sh
+```shell
 ./url-probe -source=txt -file=urls.txt
 ```
 
-## contributing
+## Contributing
 
-- pull requests are welcome, for major changes, please open an issue first to
-  discuss what you would like to change
+- Pull requests are welcome, for major changes, please open an issue first to
+  discuss what you would like to change.
 
-- please make sure to update tests as appropriate
+- Please make sure to update tests as appropriate.
 
-## license
+## License
 
 - [MIT](https://choosealicense.com/licenses/mit/)
