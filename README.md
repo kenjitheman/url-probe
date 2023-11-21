@@ -34,37 +34,37 @@
 
 ## Installation
 
-```shell
+```sh
 git clone https://github.com/kenjitheman/url-probe
 ```
 
 ## Usage
 
-```shell
+```sh
 go build
 ```
 
 - Using command line arguments:
 
-```shell
+```sh
 ./url-probe https://example.com https://example2.com
 ```
 
 - Using csv as a source:
 
-```shell
+```sh
 ./url-probe -source=csv -file=urls.csv
 ```
 
 - Using json as a source:
 
-```shell
+```sh
 ./url-probe -source=json -file=urls.json
 ```
 
 - Using txt as a source:
 
-```shell
+```sh
 ./url-probe -source=txt -file=urls.txt
 ```
 
