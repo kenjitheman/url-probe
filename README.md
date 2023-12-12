@@ -16,7 +16,8 @@
 ## Project structure:
 
 ```go
-.
+url-probe
+│
 ├── core
 │   ├── args.go
 │   ├── core.go
