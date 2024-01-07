@@ -1,38 +1,3 @@
-## url-probe
-
-### That the tool is guarding or watching over URLs to ensure their availability and performance.
-
-###
-
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" height="200" alt="go logo"  />
-</div>
-
-###
-
-- A simple command-line tool in golang which is checking url health and performance.
-- Provides a command-line interface for checking url health and performance.
-
-## Project structure:
-
-```go
-url-probe
-│
-├── core
-│   ├── args.go
-│   ├── core.go
-│   └── reader.go
-├── go.mod
-├── go.sum
-├── main.go
-├── README.md
-└── tests
-    ├── args_test.go
-    ├── core_test.go
-    ├── probe_test.go
-    └── reader_test.go
-```
-
 ## Installation
 
 ```sh
