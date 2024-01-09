@@ -1,7 +1,7 @@
 ## Installation
 
 ```sh
-git clone https://github.com/kenjitheman/url-probe
+git clone https://github.com/btwkenji/url-probe
 ```
 
 ## Usage

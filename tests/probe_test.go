@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/kenjitheman/url-probe/core"
+	"github.com/btwkenji/url-probe/core"
 	"net/http"
 	"net/http/httptest"
 	"testing"
