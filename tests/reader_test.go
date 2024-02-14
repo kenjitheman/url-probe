@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/btwkenji/url-probe/core"
+	"github.com/kenjitheman/url-probe/core"
 	"os"
 	"testing"
 )

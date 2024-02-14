@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/btwkenji/url-probe/core"
+	"github.com/kenjitheman/url-probe/core"
 )
 
 func main() {
